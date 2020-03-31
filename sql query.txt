@@ -1,0 +1,44 @@
+ CREATE TABLE `reservation` (
+  `id` int(11) NOT NULL AUTO_INCREMENT PRIMARY KEY,
+  `Tid` varchar(50) NOT NULL, 
+  `Tno` INT(50) NOT NULL,
+  `Tname` varchar(50) NOT NULL, 
+  `Tsource` varchar(50) NOT NULL,
+  `TDestination` varchar(100) NOT NULL,
+  `Tdate` DATE(50) NOT NULL,
+  `Tclass` varchar(50) NOT NULL, 
+  `Tquota` varchar(50) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+CREATE TABLE `passengers` (
+  `id` int(11) NOT NULL AUTO_INCREMENT PRIMARY KEY,
+  `Adhr_no` INT(50) NOT NULL, 
+  `P_FName` varchar(50) NOT NULL,
+  `P_LName` varchar(50) NOT NULL, 
+  `P_Age` INT(10) NOT NULL,
+  `P_Gender` varchar(50) NOT NULL,
+  `P_Address` varchar(50) NOT NULL,
+  `P_Contact` INT(50) NOT NULL,
+  `Tno` INT(50) NOT NULL 
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;  
+
+CREATE TABLE `users` (
+  `id` int(11) NOT NULL AUTO_INCREMENT PRIMARY KEY,
+  `Fname` varchar(50) NOT NULL, 
+  `Lname` varchar(50) NOT NULL,
+  `Pno` INT(50) NOT NULL, 
+  `username` varchar(50) NOT NULL,
+  `email` varchar(50) NOT NULL,
+  `password` varchar(50) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;  
+
+  CREATE TABLE `enquiry` (
+  `Cid` int(11) NOT NULL AUTO_INCREMENT PRIMARY KEY,
+  `C_Fname` varchar(50) NOT NULL, 
+  `C_Lname` varchar(50) NOT NULL,
+  `C_Email` varchar(50) NOT NULL, 
+  `C_Contact` INT(50) NOT NULL,
+  `C_Enquiry` varchar(500) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;  
+
+CREATE TABLE `registration`.`trains` ( `Tno` INT(50) NOT NULL , `Tname` VARCHAR(100) NOT NULL , `Tsource` VARCHAR(50) NOT NULL , `TDestination` VARCHAR(50) NOT NULL , `Tdate` VARCHAR(50) NOT NULL , `Tseats` INT(50) NOT NULL , `Tstatus` VARCHAR(50) NOT NULL , `Tdays` VARCHAR(50) NOT NULL , PRIMARY KEY (`Tno`)) ENGINE = InnoDB;
